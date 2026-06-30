@@ -1,0 +1,160 @@
+body {
+    font-family: 'Comfortaa', 'Quicksand', 'Georgia', serif;
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+    color: #5a4b4b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Floating elements in background */
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.floating-hearts span {
+    position: absolute;
+    display: block;
+    font-size: 1.5rem;
+    bottom: -50px;
+    opacity: 0.3;
+    animation: floatUp 8s infinite linear;
+}
+
+/* Random positions & speeds for floating elements */
+.floating-hearts span:nth-child(1) { left: 10%; animation-duration: 6s; }
+.floating-hearts span:nth-child(2) { left: 30%; animation-duration: 9s; animation-delay: 2s; }
+.floating-hearts span:nth-child(3) { left: 55%; animation-duration: 7s; }
+.floating-hearts span:nth-child(4) { left: 75%; animation-duration: 11s; animation-delay: 1s; }
+.floating-hearts span:nth-child(5) { left: 90%; animation-duration: 8s; }
+
+.container {
+    text-align: center;
+    max-width: 480px;
+    width: 90%;
+    padding: 1.5rem;
+    z-index: 2;
+}
+
+.heart-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+h1 {
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    color: #4a3737;
+    font-size: 2rem;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #8a7676;
+    margin-bottom: 2rem;
+}
+
+/* Cute Letter Card */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.25);
+    border: 2px solid #fff0f2;
+    transition: all 0.5s ease;
+}
+
+.open-btn {
+    background-color: #ff8796;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.05rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 135, 150, 0.4);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.open-btn:hover {
+    background-color: #ff6b7e;
+    transform: translateY(-2px);
+}
+
+/* Image/GIF styling */
+.visual-slot {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.visual-slot img {
+    max-width: 160px;
+    border-radius: 15px;
+}
+
+.message {
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #554444;
+    animation: fadeIn 1s ease forwards;
+}
+
+.message h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: #4a3737;
+}
+
+.signature {
+    margin-top: 2rem;
+    text-align: right;
+    font-style: italic;
+}
+
+.signature span {
+    font-weight: bold;
+    color: #ff6b7e;
+    font-size: 1.2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.4; }
+    90% { opacity: 0.4; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}

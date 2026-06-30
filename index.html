@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You 🤍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating hearts background effect -->
+    <div class="floating-hearts">
+        <span>🤍</span><span>🌸</span><span>🤍</span><span>🌸</span><span>🤍</span>
+    </div>
+
+    <div class="container">
+        <div class="heart-icon">🌸</div>
+        <h1>I'm So Sorry Anusha...</h1>
+        <p class="subtitle">I made this for you. Please open it?</p>
+
+        <!-- Interactive Envelope/Card -->
+        <div class="card" id="apologyCard">
+            <button class="open-btn" onclick="revealMessage()">Open My Letter 💌</button>
+            
+            <div class="message hidden" id="secretMessage">
+                
+                <!-- CUTE GIF/PIC SLOT -->
+                <div class="visual-slot">
+                    <!-- You can use any cute Peach & Goma, Milk & Mocha, or cute cat GIF from Giphy/Tenor -->
+                    <img src="https://media1.tenor.com/m/SR9UtBQzsqwAAAAC/sorry.gif" alt="Cute Apology GIF">
+                </div>
+
+                <h2>To the girl who means the world to me,</h2>
+                
+                <p>I am deeply sorry for bringing up your past. It was completely wrong of me to do, and it breaks my heart knowing that I caused you pain or made you feel uncomfortable. I haven't rested easy ever since the last time we met. i never want to be a source of pain or anxiety in your life, and I hate that I let my own thoughtlessness get the better of me. Please take all the time and space you need we've misunderstood eachother in the past as well if you recall and i want to clear this misunderstanding as well cause I really want it to be you .Your trust means everything to me, and I want to protect your peace, not disrupt it.</p>
+                
+                <p>You deserve to feel completely safe, valued, and loved with me. I am here, I am listening and I promise to be more mindful, to listen better, be protective towards your feelings and to focus entirely on the beautiful future we are building together.</p>
+                
+                <p class="signature">With all my love, <br><span>Sujal</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            const message = document.getElementById('secretMessage');
+            const button = document.querySelector('.open-btn');
+            
+            message.classList.remove('hidden');
+            button.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
