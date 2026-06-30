@@ -1,8 +1,15 @@
 body {
-    background-image: url('https://www.pinterest.com/pin/36451078229192306/');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    font-family: 'Comfortaa', 'Quicksand', 'Georgia', serif;
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+    color: #5a4b4b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* Floating elements in background */
